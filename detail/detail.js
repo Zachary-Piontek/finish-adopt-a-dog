@@ -14,13 +14,13 @@ async function handlePageLoad() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
 
-    if (!id) window.location = '/';
+    if (!id) window.location = '../';
 
     // *** Use the id to get this dog (async, so you need to "await"!)
     // and assign to "dog" variable
     
     dog = await getDog(id);
-    if (!dog) window.location = '/';
+    if (!dog) window.location = '../';
 
     display();
 }
